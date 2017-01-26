@@ -494,7 +494,6 @@ ticking = false;
 
 function onScroll() {
     lastKnownScrollY = window.scrollY;
-    console.log(lastKnownScrollY);
 	requestTick();
 }
 
@@ -517,9 +516,7 @@ function updatePositions() {
   var lengthTotal = items.length;
   var phaseTotal = document.body.scrollTop / 1250;
   
-  //forced reflow - needs to be changed
-  
-
+  //forced reflow - changed
   
   for (var i = 0; i < lengthTotal; i++) {
     var phase = Math.sin((phaseTotal) + (i % 5));
