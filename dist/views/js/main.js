@@ -508,6 +508,7 @@ function requestTick() {
 
 function updatePositions() {
   frame++;
+  window.performance.mark("mark_start_frame");
   ticking = false;
   
   var items = document.getElementsByClassName('mover');
@@ -517,6 +518,8 @@ function updatePositions() {
   var phaseTotal = document.body.scrollTop / 1250;
   
   //forced reflow - needs to be changed
+  
+
   
   for (var i = 0; i < lengthTotal; i++) {
     var phase = Math.sin((phaseTotal) + (i % 5));
